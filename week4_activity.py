@@ -6,8 +6,10 @@
 # indexing strings -- slide 4
 my_text = 'this is a text'
 result = my_text  #get the index of the letter a
-print(result)
-
+print(result[10:-1])
+#-1 is the last letter of the string
+#-2 is the second to last letter of the stirng
+print(result[-2])
 #get the index of the third letter from the end of the text
 
 # find the index of the letter s
@@ -15,16 +17,73 @@ print(result)
 ###slide 5
 # string[start:stop:step]
 #example
-# text = "Hello, World!"
-# print(text[7:12])  # prints "World"
+text = "Hello, World!"
+print(text[7:12])#prints world
+print(text[0:5])#prints hello
+print(text[2:5])#prints llo
+print(text[-1])#prints !
+print(text[::-1])#prints !dlroW ,olleH
+print(text[0:-1:2])#prints hlo ol
+print(text[0:-1:3])#prints hl r
+
 text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # Get the substring CDE and put in a variable
-
+substring= text.find("CDE")
+print(substring)
+substring=text[2:5]
+print(substring)#prints CDE
+substring= text.find("RST")
+print(substring)
+substring=text[17:20]
+print(substring)#RST
+substring= text.find("H")
+print(substring)
+substring= text.find("T")
+print(substring)
+substring=text[7:20]
+print(substring)
 #get the first letter all the way to the 4th letter
-
+print(text[0:4])
 #get the first letter to the final letter and skip every 3rd letter
 
-# Built-in methods:
+#uppercase the text
+sentence= "especially in the electronic communication, writing in all caps is equivalent to yelling."
+print(sentence.upper())#prints letters in uppercase
+sentence2= "SIMPLE IS ALWAYS BETTER THAN COMPLEX"
+print(sentence2.lower())#prints letters in lowercase
+print(sentence.find("communications"))
+print(sentence[26:38].upper())
+#join the folloing list into a string
+#seperate each item with a space
+word_list=["Simple","is","better","than","complex"]
+joined_list="".join(word_list)
+print(joined_list)#prints simple is better than complex
+#this is all the join list into a sting space
+#between each word
+
+
+#split string into a list
+sentence3="If the implementation is hard to explain, it might be a bad idea"
+#split the sentence into a list
+split_sentence3= sentence3.split()
+print(split_sentence3)#prints ['If', 'the', 'implementation', 'is', 'hard', 'to', 'explain,', 'it', 'might', 'be', 'a', 'bad', 'idea']
+#this will split a sentence into a list of words\
+
+#replace the word "hard" with "easy" and "bad" with "good"
+sentence4 = "If the implementation is hard to explain, it might be a bad idea"
+new_sentence = sentence4.replace("hard","easy").replace("bad","good")
+print(new_sentence) #prints If the implementation is easy to explain, it might be a good idea
+
+
+
+#concatenate the text "repetition" 15 times
+repetition="Repetition"*15
+print(repetition)
+
+
+
+
+# Built-in methods
 # Python has a variety of built-in methods to work with substrings.
 
 # a. str.find():
